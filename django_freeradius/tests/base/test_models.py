@@ -83,7 +83,8 @@ class BaseTestRadiusBatch(object):
 
 class BaseTestRadiusProfile(object):
     def test_string_representation(self):
-        radiusprofile = self.radius_profile_model(name='test')
+        RadiusProfile = self.radius_profile_model
+        radiusprofile = RadiusProfile(name='test')
         self.assertEqual(str(radiusprofile), 'test')
 
     def test_save_method(self):
